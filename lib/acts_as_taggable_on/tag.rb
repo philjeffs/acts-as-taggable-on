@@ -3,6 +3,8 @@ module ActsAsTaggableOn
   class Tag < ::ActiveRecord::Base
     extend ActsAsTaggableOn::Utils
 
+    searchkick
+
     attr_accessible :name if defined?(ActiveModel::MassAssignmentSecurity)
 
     ### ASSOCIATIONS:
